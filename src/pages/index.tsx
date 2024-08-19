@@ -8,12 +8,15 @@ import Hero from "~/components/landing/hero";
 import Projects from "~/components/landing/project";
 import Roadmap from "~/components/landing/roadmap";
 import { cn } from "~/lib/utils";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const { theme } = useTheme();
 
   return (
-    <main className="flex flex-col items-stretch">
+    <main className="flex flex-col items-center">
       <div className="h-screen w-screen bg-gradient-to-t from-[#ffffff] via-[#efd17bc7] to-[#ffed951a] dark:bg-none" />
       <video
         src="waves.webm"
